@@ -1,0 +1,51 @@
+﻿body{margin:0;font:16px/1  "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;color:#525252;}
+input,textarea,select{margin:0;padding:0;outline:none;resize:none;border:none;font:16px/1  "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+form,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p{margin:0;padding:0;list-style:none;}
+a{text-decoration:none;color:#000;outline:none;transition: all .2s linear 0s;}
+a:hover,a:focus{text-decoration:none;}
+a img{border:none;}
+img,input,select{vertical-align:middle;}
+i,em{font-style:normal;}
+button{cursor:pointer;}
+button i{display:none;}
+table{border-collapse:collapse;border-spacing:0;}
+.fl{float:left;}
+.fr{float:right;}
+/*首行缩进*/
+.text-2em{text-indent:2em;}
+/*字号大小*/
+.t-12{font-size:12px;}
+.t-14{font-size:14px;}
+.t-18{font-size:18px;}
+.t-30{font-size:30px;}
+/*字体颜色*/
+.t-org{color:#f97243;}
+.t-green{color:#54af48;}
+/*字体粗细*/
+.font-n{font-weight:normal;}
+/*设置*/
+.pos-rel{position:relative;}
+/*清楚浮动*/
+.clear{clear:both;}
+.clearfix:after{ content:"."; display:block; height:0; clear:both; visibility:hidden; }    
+.clearfix{display:inline-block; }
+.clearfix{display:block;}
+.wrapper{margin:0 auto;width:1000px;}
+/*外间距*/
+.mar-l20{margin-left:20px;}
+.mar-r20{margin-right:20px;}
+.mar-t10{margin-top:10px;}
+.mar-t20{margin-top:20px;}
+.mar-l10{margin-left:10px;}
+.mar-r10{margin-right:10px;}
+.mar-b10{margin-bottom:10px;}
+.mar-b20{margin-bottom:20px;}
+.mar-lr5{margin:0 5px;}
+.pad-t30{padding-top:30px;}
+.min-h300{min-height:300px;}
+.min-h500{min-height:500px;}
+.min-h600{min-height:600px;}
+
+/*文字超出隐藏*/
+.txt-over{text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+label{margin-bottom: 0;;}

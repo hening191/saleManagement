@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hening.sale.corecode.sale.mapper.SaleMapper">
+
+	<select id="findSaleRecords" resultType="java.util.Map">
+		SELECT pro.productName,prorec.count,prorec.totalPrice,prorec.operator,prorec.customer,
+		pro.price,pro.prePrice,DATE_FORMAT(prorec.recordDate,'%Y-%m-%d %T') recordDate
+ 		FROM productRecord prorec
+ 		left join product pro on pro.productId = prorec.productId
+ 		<where>
+	 		<if test="sale.type != null and sale.type !=''">
+	 		    prorec.type = #{sale.type}
+	 		</if>
+			<if test="sale.productName != null and sale.productName !='' ">
+			    and pro.productName like concat('%',#{sale.productName},'%')
+			</if>
+			<if test="sale.b_date != null">
+			    and prorec.recordDate &gt;= #{sale.b_date}
+			</if>
+			<if test="sale.d_date != null">
+			    and prorec.recordDate &lt; DATE_FORMAT(date_add(#{sale.d_date},interval 1 day),"%Y-%m-%d")
+			</if>
+		</where>
+	</select>
+	
+	<insert id="addProductRecord">
+	    insert into productrecord(productId,recordDate,count,totalPrice,operator,customer,type)
+		values(#{sale.productId},now(),#{sale.count},#{sale.totalPrice},#{sale.operator},#{sale.customer},#{sale.type})
+	</insert>
+	
+	<select id="getProductRecordCount" resultType="java.lang.Integer">
+	    select count(1) from productrecord where productId = #{sale.productId} and type = #{sale.type}
+	</select>
+	
+	<delete id="deleteProductRecord">
+	    delete from productrecord
+	    <where>
+	        productId = #{sale.productId}
+	    </where>
+	</delete>
+
+</mapper>

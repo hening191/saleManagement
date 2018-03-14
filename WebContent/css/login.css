@@ -1,0 +1,57 @@
+body,html{height:100%;}
+.bg_linear{ height:100%; background:#141743 url(../img/page-img/bg.png) no-repeat center;} 
+
+/****************************登录页面 开始****************************/
+.login_wrap{width:100%; height:100%; overflow: hidden;}
+/*头部logo*/
+.login_header{width: 1200px; height:15%; margin:0 auto;}
+.login_header h1{padding-top:50px;}
+
+/*内容区*/
+.login_content{width:1200px; height:410px; margin:8% auto;  overflow:hidden;}
+.login_content .right_inner{width:420px; height:410px; background:#fff; border-radius: 10px; margin:0 auto;}
+.login_content .right_inner .title{padding:30px 0; text-align: center;}
+.login_content .right_inner .input_wrap{width:355px; margin:0 auto; }
+.login_content .right_inner .input_wrap .input{border:1px solid #c6c6c6; border-radius: 5px; margin-bottom: 20px; overflow:hidden; position: relative;}
+.login_content .right_inner .input_wrap .input_u{background:#fff url(../img/icon-img/icon0.png) no-repeat 20px center;}
+.login_content .right_inner .input_wrap .input_p{background:#fff url(../img/icon-img/icon1.png) no-repeat 20px center;}
+.login_content .right_inner .input_wrap .input input{line-height: 60px; padding:0 100px 0 60px; font-size: 18px; background:none; color:#333;}
+.erro_info{position:absolute; right:0px; top:0; font-size: 18px; color:#de1616; z-index: 10; line-height: 60px; padding-right: 10px; display: none;}
+.login_content .right_inner .input_wrap .input.erro .erro_info{display:block;}
+
+/*用户输入错误时*/
+.login_content .right_inner .input_wrap .input.erro{border-color:#de1616;border-right-width: 4px ;}
+.login_content .right_inner .input_wrap .erro.input_u{background-image: url(../img/icon-img/icon0-e.png);}
+.login_content .right_inner .input_wrap .erro.input_p{background-image: url(../img/icon-img/icon1-e.png);}
+
+/*用户输入时，获取焦点时*/
+.login_content .right_inner .input_wrap .input.active{border-color:#de1616;border-right-width: 4px ;}
+.login_content .right_inner .input_wrap .active.input_u{background-image: url(../img/icon-img/icon0-e.png);}
+.login_content .right_inner .input_wrap .active.input_p{background-image: url(../img/icon-img/icon1-e.png);}
+
+
+/*记住密码*/
+.chose_wrap a{color:#333; font-size: 18px;;}
+.chose_wrap .left_btn{padding-left: 30px; background:url(../img/icon-img/check.png) no-repeat left center; background-size: 18px;}
+.chose_wrap .left_btn.active{background-image: url(../img/icon-img/check-h.png); background-size: 18px;}
+.chose_wrap .right_btn{text-decoration: underline;}
+
+/*登录按钮*/
+.button_wrap{width:100%; height:60px; margin-top: 20px;;}
+.button_wrap a{display:block; font-size: 26px; color:#fff; border-radius: 5px; background:#de1616; line-height: 60px; text-align: center; }
+.button_wrap a.active,.button_wrap a:hover{background:#cf0e0e;}
+
+
+
+
+/*底部版权*/
+.login_footer{height: 80px; width: 100%;  position: fixed; left:0; bottom:0; background:rgba(0,0,0,.1);}
+.login_footer .footer_inner{width:1200px; margin: 0 auto; overflow: hidden; font-size: 14px; color: #e1e2e3; opacity: .8;}
+.login_footer .footer_inner .left{float: left; width:400px; padding-top: 15px;}
+.login_footer .footer_inner .left a{color: #e1e2e3; }
+.login_footer .footer_inner .center{float: left; width:500px; padding-top: 15px;}
+.login_footer .footer_inner .right{float: left; width:190px; height:60px; padding:20px 0 0 110px; background:url(../img/icon-img/icon-tel.png) no-repeat 40px center; background-size: 58px 50px;}
+.login_footer .footer_inner p{ line-height: 30px;}
+.login_footer .footer_inner .right p{line-height: 50px;}
+
+/****************************登录页面 结束****************************/

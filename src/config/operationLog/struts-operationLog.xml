@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="operationLog"  extends="struts-default,json-default"  namespace="/operationLog">
+		
+		<action name="sale_*" method="{1}" 
+					class="com.hening.sale.corecode.operationLog.action.OperationLogAction">
+					
+			<result name="operationLog-success">/view/operationLog/operationLog.jsp</result>
+			
+			<result name="findOperationLogList-success" type="json">
+				<param name="root">resMap</param>
+			</result>
+			
+		</action>
+	
+	</package>
+	
+
+</struts>

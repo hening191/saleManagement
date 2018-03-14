@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hening.sale.corecode.operationLog.mapper.OperationLogMapper">
+
+	<select id="findOperationLogList" resultType="java.util.Map">
+	    select u.name,oplog.operation,
+		DATE_FORMAT(oplog.operationDate,"%Y-%m-%d %T")operationDate
+		from
+		operationExceptionLog oplog
+		LEFT JOIN user u on oplog.userId = u.userId
+		<where>
+		    <if test="oplog.b_date != null">
+			    oplog.operationDate &gt;= #{oplog.b_date}
+			</if>
+			<if test="oplog.d_date != null">
+			    and oplog.operationDate &lt; DATE_FORMAT(date_add(#{oplog.d_date},interval 1 day),"%Y-%m-%d")
+			</if>
+		</where>
+	</select>
+	
+	<insert id="addOperationLog">
+	    insert into operationExceptionLog(userId,operation,operationDate)
+		values(#{oplog.userId},#{oplog.operation},now())
+	</insert>
+
+</mapper>

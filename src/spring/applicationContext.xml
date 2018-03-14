@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+	
+     <!-- 从配置文件里面获取数据库连接 -->				 
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>classpath:properties/jdbc.properties</value>
+		</property>
+	</bean>
+	 <!-- DataSource数据源，使用c3p0连接池 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driverClassName}"></property>
+		<property name="jdbcUrl"     value="${jdbc.url}"></property>
+		<property name="user"        value="${jdbc.username}"></property>
+		<property name="password"    value="${jdbc.password}"></property>
+		<property name="minPoolSize" value="35"></property>
+		<property name="maxPoolSize" value="150"></property>
+		<property name="initialPoolSize" value="35"></property> 
+		<property name="maxIdleTime" value="120"></property>
+		<property name="acquireIncrement" value="5"></property>
+		<property name="maxStatements" value="100"></property>
+		<property name="idleConnectionTestPeriod" value="60"></property>
+	</bean>
+	
+	<context:annotation-config/>
+	
+	<context:component-scan base-package="com.hening.sale"></context:component-scan> 
+	
+	<!-- 事务管理器 -->
+	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 配置事务切面,指定事务管理器 -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+		    <tx:method name="select*" read-only="true" propagation="REQUIRED" />
+            <tx:method name="find*"   read-only="true" propagation="REQUIRED" />
+            <tx:method name="get*"   read-only="true" propagation="REQUIRED" />
+            <tx:method name="save*" propagation="REQUIRED" isolation="REPEATABLE_READ" />
+            <tx:method name="update*" propagation="REQUIRED" isolation="REPEATABLE_READ" />
+            <tx:method name="edit*" propagation="REQUIRED" isolation="REPEATABLE_READ" />
+            <tx:method name="add*" propagation="REQUIRED" isolation="REPEATABLE_READ" />
+            <tx:method name="delete*" propagation="REQUIRED" isolation="REPEATABLE_READ" />
+            <tx:method name="del*" propagation="REQUIRED" isolation="REPEATABLE_READ" />
+            <tx:method name="start*" propagation="REQUIRED" isolation="REPEATABLE_READ" />
+            <tx:method name="*" rollback-for="Exception"/>
+		</tx:attributes>
+	</tx:advice>
+	
+	<!-- service配置切入点 -->
+	<aop:config>
+		<aop:advisor pointcut="execution(* com.hening.sale.*.*.service.*.*(..))" advice-ref="txAdvice"/>
+	</aop:config>
+	
+    <!-- 扫描特定的包，自动成批地创建映射器 -->
+     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"> 
+        <property name="basePackage" value="com.hening.sale.*.*.mapper"/> 
+     </bean>
+    
+	<!-- mybatis sqlMapClient 配置 -->
+	<bean id="sqlMapClient" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="typeAliasesPackage" value="*com.hening.sale.*.*.entity" /> 
+		 <property name="mapperLocations"  value="classpath:com.hening.sale.*.*.mapper.*.xml" />
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- bin 生成器   自动创建factory-->
+	<bean id="springContextHolder" class="com.hening.sale.common.spring.SpringContextHolder" />
+	
+</beans>

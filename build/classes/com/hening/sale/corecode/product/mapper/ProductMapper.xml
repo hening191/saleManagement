@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hening.sale.corecode.product.mapper.ProductMapper">
+
+	<select id="findProductList" resultType="java.util.Map">
+		select * from product pro
+		<where>
+		    <if test="pro.productName != null and pro.productName !='' ">
+			    pro.productName like concat('%',#{pro.productName},'%')
+			</if>
+		</where>
+		
+	</select>
+	
+	<insert id="addProduct" useGeneratedKeys="true" keyProperty="pro.productId" parameterType="com.hening.sale.corecode.product.entity.Product">
+	    insert into product(productName,sock,price,prePrice)
+		values(#{pro.productName},#{pro.sock},#{pro.price},#{pro.prePrice})
+	</insert>
+	
+	<update id="editProduct">
+	    update product SET
+		productName = #{pro.productName},
+		sock = #{pro.sock},
+		price = #{pro.price},
+		prePrice = #{pro.prePrice}
+		where productId = #{pro.productId}
+	</update>
+	
+	<delete id="deleteProduct">
+	    delete from product where productId = #{pro.productId}
+	</delete>
+	
+	<select id="findProductByName" resultType="com.hening.sale.corecode.product.entity.Product">
+	    select * from product pro where pro.productName = #{name}
+	</select>
+	
+	<select id="findProductById" resultType="com.hening.sale.corecode.product.entity.Product">
+	    select * from product pro where pro.productId = #{productId}
+	</select>
+
+</mapper>

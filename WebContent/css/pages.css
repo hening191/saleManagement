@@ -1,0 +1,254 @@
+body{background:#fdfdfd;}
+/*澶撮儴淇℃伅*/
+.header{height:120px; width:100%; background:url(../img/page-img/header-bg.png) no-repeat; background-size:100% 100%;}
+.header .hd-inner{width:1200px; height:120px; margin:0 auto;}
+.header .hd-inner .logo{padding-top:40px;}
+.header .hd-inner .tui-c{padding-top:44px;}
+.header .hd-inner .tui-c img{vertical-align: middle; margin-right: 10px;}
+.header .hd-inner .tui-c a{font-size: 20px; color:#fff;}
+.header .hd-inner .nav{padding:0 100px;}
+.header .hd-inner .nav ul{height:120px;}
+.header .hd-inner .nav ul li{ float:left; line-height: 120px; margin-right: 14px;}
+.header .hd-inner .nav ul li a{display:block; font-size: 22px; color:#fff;padding:0 20px; }
+.header .hd-inner .nav ul li.active a,.header .hd-inner .nav ul li:hover a{background:url(../img/page-img/nav-li-h.png) no-repeat center;}
+
+
+/*搴曢儴鐗堟潈*/
+.footer{height: 80px; width: 100%; background:#efefef;}
+.footer .footer_inner{width:1200px; margin: 0 auto; overflow: hidden; font-size: 14px; color: #b2b2b2; }
+.footer .footer_inner .left{float: left; width:400px; padding-top: 15px;}
+.footer .footer_inner .left a{color: #b2b2b2; }
+.footer .footer_inner .center{float: left; width:500px; padding-top: 15px;}
+.footer .footer_inner .right{float: left; width:190px;  padding:20px 0 0 110px; background:url(../img/icon-img/icon-tel1.png) no-repeat 40px bottom; background-size: 58px 50px;}
+.footer .footer_inner p{ line-height: 30px;}
+.footer .footer_inner .right p{line-height: 50px;}
+
+/*鍐呭鍖�*/
+.content{width:1200px; min-height: 700px; margin:20px auto; background:#fff; box-shadow: 0 0 10px rgba(0,0,0,.1); border:1px solid #dfe4e8; border-radius: 5px; overflow:hidden;}
+
+.c-inner{padding:30px; }
+
+.c-topTitle span{padding:0 40px; background:#fff; font-size: 34px; position: relative; z-index: 2;}
+.c-topTitle span:after,.c-topTitle span:before{position: absolute; top:18px; height:1px; background:url(../img/page-img/dot.png) no-repeat; content:''; width:8px; height:8px; }
+.c-topTitle span:before{ left:10px;}
+.c-topTitle span:after{ right:10px;}
+
+.c-subNav{margin: 0 0 20px;}
+
+
+
+
+
+
+/****************************浜哄憳绠＄悊 寮�濮�****************************/
+
+.button-list{overflow:hidden;}
+.button-list a{display:inline-block; width:60px; padding-left: 50px; border-radius: 50px;  line-height:50px; border:2px solid #de1616; margin:4px 0 0 20px; color:#666;}
+.button-list a.btn-icon0{background:url(../img/icon-img/s-icon0.png) no-repeat 20px center;}
+.button-list a.btn-icon1{background:url(../img/icon-img/s-icon1.png) no-repeat 20px center;}
+.button-list a.btn-icon2{background:url(../img/icon-img/s-icon2.png) no-repeat 20px center;}
+.button-list a.btn-icon3{background:url(../img/icon-img/s-icon3.png) no-repeat 20px center;}
+.button-list a.btn-icon4{background:url(../img/icon-img/s-icon4.png) no-repeat 20px center;}
+.button-list a:hover.btn-icon0{background-image:url(../img/icon-img/s-icon0-h.png); background-color:#e14949 ; color:#fff;}
+.button-list a:hover.btn-icon1{background-image:url(../img/icon-img/s-icon1-h.png); background-color:#e14949 ; color:#fff;}
+.button-list a.active.btn-icon2{background-image:url(../img/icon-img/s-icon2-h.png); background-color:#e14949 ; color:#fff;}
+.button-list a.active.btn-icon3{background-image:url(../img/icon-img/s-icon3-h.png); background-color:#e14949 ; color:#fff;}
+.button-list a.active.btn-icon4{background-image:url(../img/icon-img/s-icon4-h.png); background-color:#e14949 ; color:#fff;}
+
+
+
+
+
+.c-table{width:100%; }
+.c-table table{width:100%;  text-align: center; border:1px solid #f48484;}
+.c-table table tr th{height:60px;background:#f38080;  border-bottom:1px solid #d64444; font-size: 20px; font-weight:normal;  color:#FFF; }
+.c-table table tr th a,.c-table table tr td a{display:block;  height:60px; background:url(../img/page-img/check.png) no-repeat center;}
+.c-table table tr td{height:54px; cursor: pointer; font-size: 16px; color:#666;}
+.c-table table tr.bg-col{background:#fdf9f7;}
+.c-table table tr:hover{background:#fffbeb;}
+.c-table table tr.active{background:#faf0ec;}
+
+.c-table table tr.active  td a{background-image:url(../img/page-img/check-h.png);}
+.c-table table tr td div{margin:0 auto; height:20px;}
+.c-table table tr td .box1{width:150px;}
+.c-table table tr td .box2{width:110px;}
+.c-table table tr td .box3{width:170px;}
+.c-table table tr td .box4{width:110px;}
+.c-table table tr td .box5{width:170px;}
+.c-table table tr td .box6{width:110px;}
+.c-table table tr td .box7{width:110px;}
+.c-table table tr td .box8{width:180px;}
+.c-table table tr td .lognum{width:50px;text-align:center}
+.c-table table tr td .logbox1{width:900px;}
+.c-table table tr td .logbox2{width:180px;}
+
+.page-number{padding:30px 0; height:40px;}
+
+/****************************浜哄憳绠＄悊 缁撴潫****************************/
+
+
+
+
+
+
+/****************************瀹㈡埛绠＄悊 寮�濮�****************************/
+.input-right{width:310px; border:1px solid #d9d9d9; height:46px; margin-top: 4px; position:relative; color:#999; border-radius: 5px; overflow:hidden;}
+.input-right a{position:absolute; right:0; top:0; width:60px; height:46px; background:#d9d9d9 url(../img/icon-img/search.png) no-repeat center;}
+.input-right input{width:200px; line-height: 46px; padding:0 15px;}
+.input-right.active a{background-color:#f38080;}
+.input-right.active{border-color:#f38080;}
+
+/*鍦板浘*/
+.map-wrap{width:100%; height:610px; background:pink; margin-bottom: 30px;}
+
+
+/****************************瀹㈡埛绠＄悊 缁撴潫****************************/
+
+
+
+/****************************瀹炴椂杞ㄨ抗 寮�濮�****************************/
+
+.map-content .left{width:850px;  }
+.map-content .left .text{text-align: right; font-size: 20px; color:#333;}
+.map-content .left .text span{color:#f54336;}
+.map-content .right{width:260px; }
+.map-content .right .people-list{width:260px; height:540px; border:1px solid #eee; box-shadow: 0 0 5px rgba(170,170,170,.24);}
+.map-content .right .people-list .title{height:80px; background:#eeeeee; line-height: 80px; font-size: 24px; color:#333; text-align: center;;}
+.map-content .right .people-list ul{padding:0 20px 0 10px; width:256px; height:450px;  overflow-y: scroll;}
+.map-content .right .people-list ul li{border-bottom: 1px solid #eee; padding:15px 10px; font-size: 18px; color:#666;}
+.map-content .right .people-list ul li img{margin-right:10px;}
+.map-content .right .inner{width:260px;  overflow:hidden;}
+
+.map-content .right .info{text-align: right; margin-top: 40px; ;}
+.map-content .right .info span{margin:20px 10px 0 0; font-size: 18px; color:#999;}
+.map-content .right .info span img{margin-right: 5px;}
+/****************************瀹炴椂杞ㄨ抗 缁撴潫****************************/
+
+
+
+
+
+/****************************鍘嗗彶杞ㄨ抗 寮�濮�****************************/
+.select-wrap .box{margin-right: 40px; line-height: 30px;}
+.select-wrap .box span{font-size: 18px; color:#5a5a5a; margin-right: 10px; }
+.select-wrap .box .inner{display:inline-block; width:125px; height:30px; border:1px solid #ccc; position:relative; padding:0 40px 0 15px;}
+.select-wrap .box .inner ul{position:absolute; left:0; top:35px; width:170px; padding:5px; background:#fff; border:1px solid #ccc; z-index: 88; display:none;}
+.select-wrap .box .inner ul li{padding:0 10px; font-size: 16px; cursor:pointer; margin-bottom: 5px;}
+.select-wrap .box .inner ul li.active,.select-wrap .box .inner ul li:hover{background:#fcdfdf; color:#e95353;}
+.select-wrap .box .inner .btn-arrow{position:absolute; right:0; top:0; width:40px; height:30px; background:url(../img/icon-img/arr-d.png) no-repeat center ; transform:rotate(0deg); transition: all .5s;}
+.select-wrap .box .inner .btn-arrow.active{transform:rotate(180deg);}
+.c-subNav .time{font-size:18px; line-height: 32px; padding:0 10px; border-radius: 5px;}
+.c-subNav .time span{color:#f54336;}
+.c-subNav .time img{margin-right:10px;}
+
+.select-wrap .box .inner .ul-wrap{position:absolute; left:0; top:35px; width:178px;height:410px; z-index: 88; border:1px solid #ccc; overflow:hidden; display:none;}
+.select-wrap .box .inner .ul-wrap ul{ top:0; display:block;overflow-y:scroll; height:400px; width:185px; border:none;}
+
+.select-wrap .box .inner .ple-wrap{width:483px;position:absolute; left:0; top:35px; height:410px; z-index: 88; border:1px solid #ccc; overflow:hidden; background:#fff; display:none;}
+.select-wrap .box .inner .ple-wrap .ple-content{padding:10px; height:400px; overflow-y:scroll; width:480px;overflow-x:hidden;}
+.select-wrap .box .inner .ple-wrap .people-wrap{  width:464px; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px;}
+.select-wrap .box .inner .ple-wrap .people-wrap:last-of-type{border-bottom: none;}
+.select-wrap .box .inner .ple-wrap .people-wrap em{font-size: 18px; color:#e95353; float:left; font-weight: bold; padding: 0 10px;margin:0 4px 10px 0;}
+.select-wrap .box .inner .ple-wrap .people-wrap span{padding:0 10px; color:#666; background:#f6f6f6; font-size: 16px; cursor:pointer; float:left; margin-bottom: 10px;}
+.select-wrap .box .inner .ple-wrap .people-wrap span:hover,.select-wrap .box .inner .ple-wrap .people-wrap span.active{color:#e95353; background:#fcdfdf;}
+
+.daor-btn{margin:0 15px;}
+.daor-btn img{height:32px;}
+/****************************鍘嗗彶杞ㄨ抗 缁撴潫****************************/
+
+
+
+
+
+
+/*閫夋嫨浜哄憳寮圭獥鏍峰紡*/
+
+
+.layer-wrap{position:fixed; left:0; bottom:0; right:0; top:0; background:rgba(255,255,255,.5); z-index: 999;}
+.add-people{width:400px; height:400px; background:#fff; border-radius: 10px; position:absolute; left:50%; top:50%; margin:-170px 0 0 -200px; box-shadow: 0 0 6px rgba(0,0,0,.28);  overflow:hidden;}
+.add-people .title{padding:20px 30px; background:#e95353; color:#fff; font-size: 22px;}
+.add-people .close-btn{width:30px; height:30px; background:url(../img/icon-img/close.png) no-repeat center; position:absolute; right:15px; top:15px; transition:all .5s; transform:rotate(0deg); z-index: 7;}
+.add-people .close-btn:hover{transform:rotate(180deg);}
+
+.add-people .inner{padding:30px 50px 0; font-size: 18px; color:#5a5a5a;}
+.add-people .inner .input{margin-bottom: 20px;}
+.add-people .inner .input label{text-align: right; margin-right: 10px; width:60px; line-height: 28px; }
+.add-people .inner .input input{border:1px solid #ccc; line-height: 28px; width:200px;} 
+.add-people .check a{margin-left: 120px; background:url(../img/icon-img/check.png) no-repeat center left; line-height:30px; padding-left: 30px; font-size: 16px; color:#5a5a5a; display:block;}
+.add-people .check a.active{background-image:url(../img/icon-img/check-h.png) ;}
+.add-people .btn-a{width:110px; height:40px; margin:20px auto;}
+.add-people .btn-a a{display:block; background:#e95353;  line-height:40px; font-size: 18px; color:#fff; text-align: center; border-radius: 5px;;}
+.add-people .btn-a a:hover{background:#df4545;}
+
+
+
+/*閫夋嫨瑙掕壊寮圭獥鏍峰紡*/
+
+.choose-people{width:400px; height:280px; background:#fff; border-radius: 10px; position:absolute; left:50%; top:50%; margin:-170px 0 0 -200px; box-shadow: 0 0 6px rgba(0,0,0,.28);   position:relative;}
+.choose-people .name{padding-top:50px; font-size: 22px; color:#333; text-align: center; line-height: 50px; position:relative; margin:0 10px;;}
+.choose-people .name span{width:82%; margin:0 auto; display:block;background:#fff; position:relative; z-index: 2;}
+.choose-people .name:after{position:absolute; left: 0; bottom:20px; height:1px; background:#eee; content:''; width:100%; z-index: 1;}
+.choose-people .pic{position:absolute; left:50%; top:-40px; margin:0 0 0 -42px;}
+.choose-people .box{margin-top: 30px; line-height: 30px; padding:0 50px;}
+.choose-people .box span{font-size: 18px; color:#5a5a5a; margin-right: 10px; }
+.choose-people .box .inner{display:inline-block; width:140px; height:30px; border:1px solid #ccc; position:relative; padding:0 40px 0 15px;}
+.choose-people .box .inner ul{position:absolute; left:0; top:35px; width:184px; padding:5px; background:#fff; border:1px solid #ccc; z-index: 88; display:none;}
+.choose-people .box .inner ul li{padding:0 10px; font-size: 16px; cursor:pointer; margin-bottom: 5px;}
+.choose-people .box .inner ul li.active,.choose-people .box .inner ul li:hover{background:#fcdfdf; color:#e95353;}
+.choose-people .box .inner .btn-arrow{position:absolute; right:0; top:0; width:40px; height:30px; background:url(../img/icon-img/arr-d.png) no-repeat center ; transform:rotate(0deg); transition: all .5s;}
+.choose-people .box .inner .btn-arrow.active{transform:rotate(180deg);}
+.choose-people .btn-a{width:180px; margin:30px auto;}
+.choose-people .btn-a a{float:left; width:80px; line-height:40px;  font-size: 18px; text-align: center; border-radius: 5px;;}
+.choose-people .btn-a .btn-left{background:#e2e1e1; color:#999; margin-right: 20px;}
+.choose-people .btn-a .btn-left:hover{background:#d7d4d4;}
+.choose-people .btn-a .btn-right{background:#e95353; color:#fff;}
+.choose-people .btn-a .btn-right:hover{background:#df4545; }
+.choose-people .box .inner .main-ul{overflow-y:scroll; overflow-x:hidden; height:200px;}
+
+
+/*璇︽儏*/
+.detail-people{width:400px; height:320px; background:#fff; border-radius: 10px; position:absolute; left:50%; top:50%; margin:-170px 0 0 -200px; box-shadow: 0 0 6px rgba(0,0,0,.28);  overflow:hidden; position:relative;}
+.detail-people .title{padding:20px 30px;  color:#e95353; font-size: 22px; text-align: center; border-bottom: 1px solid #eee; margin:0 20px;}
+.detail-people .close-btn{width:30px; height:30px; background:url(../img/icon-img/close-icon.png) no-repeat center; position:absolute; right:15px; top:15px; transition:all .5s; transform:rotate(0deg); z-index: 7;}
+.detail-people .close-btn:hover{transform:rotate(180deg);}
+
+.detail-people .inner{padding:30px 50px 0; font-size: 18px; color:#5a5a5a;}
+.detail-people .inner p{margin-bottom: 20px; padding:0 20px;}
+.detail-people .inner p img{margin:-10px 10px 0 0; display:inline-block;}
+.detail-people .inner p span{display:inline-block; width:80%; }
+.detail-people .btn-a{width:240px;  height:40px; margin:20px auto;}
+.detail-people .btn-a a{float:left; width:110px;  line-height:40px; font-size: 18px; color:#fff; text-align: center; border-radius: 5px;;}
+.detail-people .btn-a a.btn-del{ background:#d13a59; margin-right: 20px;}
+.detail-people .btn-a a.btn-del:hover{background:#c93261;}
+.detail-people .btn-a a.btn-bol{ background:#e95353;}
+.detail-people .btn-a a.btn-bol:hover{background:#df4545;}
+
+
+
+/*瀵煎嚭鑰冨嫟璁板綍寮圭獥*/
+
+
+.layer-wrap{position:fixed; left:0; bottom:0; right:0; top:0; background:rgba(255,255,255,.5); z-index: 999;}
+.daor-people{width:540px; height:320px; background:#fff; border-radius: 10px; position:absolute; left:50%; top:50%; margin:-170px 0 0 -270px; box-shadow: 0 0 6px rgba(0,0,0,.28);}
+.daor-people .title{padding:20px 30px; background:#e95353; color:#fff; font-size: 22px;}
+.daor-people .close-btn{width:30px; height:30px; background:url(../img/icon-img/close.png) no-repeat center; position:absolute; right:15px; top:15px; transition:all .5s; transform:rotate(0deg); z-index: 7;}
+.daor-people .close-btn:hover{transform:rotate(180deg);}
+
+.daor-people .inner{padding:30px 50px 0; font-size: 18px; color:#5a5a5a;}
+
+.daor-people .box{margin-top: 30px; line-height: 30px; padding:0 50px;}
+.daor-people .box span{font-size: 18px; color:#5a5a5a; margin-right: 10px; }
+.daor-people .box .inner{display:inline-block; width:100px; height:30px; border:1px solid #ccc; position:relative; padding:0 40px 0 15px;}
+.daor-people .box .line-in{width:20px; height:1px; background:#ccc; margin: 16px 10px 0 10px;}
+.daor-people .box .inner ul{position:absolute; left:0; top:35px; width:144px; padding:5px; background:#fff; border:1px solid #ccc; z-index: 88; display:none; max-height:150px; overflow-y:scroll;}
+.daor-people .box .inner ul li{padding:0 10px; font-size: 16px; cursor:pointer; margin-bottom: 5px;}
+.daor-people .box .inner ul li.active,.daor-people .box .inner ul li:hover{background:#fcdfdf; color:#e95353;}
+.daor-people .box .inner .btn-arrow{position:absolute; right:0; top:0; width:40px; height:30px; background:url(../img/icon-img/arr-d.png) no-repeat center ; transform:rotate(0deg); transition: all .5s;}
+.daor-people .box .inner .btn-arrow.active{transform:rotate(180deg);}
+.daor-people .box .inner .btn-time{position:absolute; right:0; top:0; width:40px; height:30px; background:url(../img/icon-img/time-icon.png) no-repeat center ;}
+.daor-people .btn-a{width:330px; margin:30px auto;}
+.daor-people .btn-a a{float:left; width:80px; line-height:40px;  font-size: 18px; text-align: center; border-radius: 5px;;}
+.daor-people .btn-a .btn-left{background:#e2e1e1; color:#999; margin-right: 146px;}
+.daor-people .btn-a .btn-left:hover{background:#d7d4d4;}
+.daor-people .btn-a .btn-right{background:#e95353; color:#fff;}
+.daor-people .btn-a .btn-right:hover{background:#df4545; }
